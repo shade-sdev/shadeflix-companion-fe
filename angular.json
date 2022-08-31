@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fe",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,22 +27,45 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap-grid.min.css",
+              "src/assets/css/bootstrap-reboot.min.css",
+              "src/assets/css/default-skin.css",
+              "src/assets/css/ionicons.min.css",
+              "src/assets/css/jquery.mCustomScrollbar.min.css",
+              "src/assets/css/main.css",
+              "src/assets/css/nouislider.min.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/photoswipe.css",
+              "src/assets/css/plyr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.5.1.min.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/jquery.mousewheel.min.js",
+              "src/assets/js/jquery.mCustomScrollbar.min.js",
+              "src/assets/js/wNumb.js",
+              "src/assets/js/nouislider.min.js",
+              "src/assets/js/plyr.min.js",
+              "src/assets/js/jquery.morelines.min.js",
+              "src/assets/js/photoswipe.min.js",
+              "src/assets/js/photoswipe-ui-default.min.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "50000kb",
+                  "maximumError": "10000mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "20000kb",
+                  "maximumError": "40000kb"
                 }
               ],
               "fileReplacements": [

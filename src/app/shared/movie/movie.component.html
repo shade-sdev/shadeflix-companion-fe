@@ -1,0 +1,31 @@
+<!-- card -->
+
+<div class="card">
+    <div class="card__cover">
+        <img src="{{imgSrc}}" alt="">
+    </div>
+    <div class="card__content">
+        <div class="main__table-btns">
+            <button class="main__table-btn main__table-btn--banned open-modal" [ngClass]="magnet ? '' : 'd-none'">
+                <i class="icon ion-ios-magnet"></i>
+            </button>
+            <button class="main__table-btn main__table-btn--view" [ngClass]="monitor ? '' : 'd-none'"
+                (click)="monitorMovie(tmdbId)">
+                <i class="icon ion-ios-eye"></i>
+            </button>
+            <button class="main__table-btn main__table-btn--edit" [ngClass]="download ? '' : 'd-none'">
+                <i class="icon ion-ios-download"></i>
+            </button>
+            <button class="main__table-btn main__table-btn--delete open-modal" [ngClass]="unmonitor ? '' : 'd-none'">
+                <i class="icon ion-ios-trash"></i>
+            </button>
+        </div>
+        <h3 class="card__title"><a href="#">{{title}}</a></h3>
+        <span class="card__category" *ngFor="let genre of genres">
+            <a href="#">{{genre}}</a>
+        </span>
+        <span class="card__rate"><i class="icon ion-ios-star"></i>{{score}}</span>
+    </div>
+</div>
+
+<!-- end card -->

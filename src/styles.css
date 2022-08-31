@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/css/bootstrap-grid.min.css';
+@import './assets/css/bootstrap-reboot.min.css';
+@import './assets/css/default-skin.css';
+@import './assets/css/ionicons.min.css';
+@import './assets/css/jquery.mCustomScrollbar.min.css';
+@import './assets/css/main.css';
+@import './assets/css/nouislider.min.css';
+@import './assets/css/owl.carousel.min.css';
+@import './assets/css/photoswipe.css';
+@import './assets/css/plyr.css';

@@ -1,0 +1,11 @@
+<div class="col-12">
+    <ul class="paginator">
+
+        <ng-container *ngFor="let page of pagesToDisplay">
+            <li class="paginator__item" [ngClass]="currentPage == page ? 'paginator__item--active' : ''"
+                (click)="emitChangePageAction(page)">
+                {{page}}</li>
+        </ng-container>
+
+    </ul>
+</div>
