@@ -10,6 +10,7 @@ import { TmdbService } from '../core/services/tmdb.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { PaginationComponent } from './pagination/pagination.component';
+import { MovieService } from '../core/services/local.movie.service';
 
 const reUsables = [FooterComponent, NavbarComponent, MovieComponent, SerieComponent, PaginationComponent]
 
@@ -29,6 +30,6 @@ const reUsables = [FooterComponent, NavbarComponent, MovieComponent, SerieCompon
     HotToastModule.forRoot()
   ],
   exports: [reUsables],
-  providers: [TmdbService]
+  providers: [TmdbService, MovieService]
 })
 export class SharedModule { }

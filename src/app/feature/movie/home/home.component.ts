@@ -4,11 +4,11 @@ import { movieGenres, TmdbMovie, TmdbMovieResult } from 'src/app/core/models/tmd
 import { TmdbService } from 'src/app/core/services/tmdb.service';
 
 @Component({
-  selector: 'app-moviehome',
-  templateUrl: './moviehome.component.html',
-  styleUrls: ['./moviehome.component.css']
+  selector: 'app-movie-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class MoviehomeComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   public movies: TmdbMovieResult[] = [];
   public totalPages: number = 68;

@@ -27,6 +27,7 @@ export class PaginationComponent implements OnInit {
   }
 
   private updatePagesToDisplay(page: number) {
+    console.log(page)
     let pagesToDisplay: number[] = [];
     if (page >= 1 && page <= this.totalPages!) {
 
@@ -43,6 +44,14 @@ export class PaginationComponent implements OnInit {
           break;
         }
       }
+    } else {
+      for (let i = 1; i <= this.totalPages!; i++) {
+        pagesToDisplay.push(i);
+        if (i == page + 3) {
+          break;
+        }
+      }
+      this.currentPage = this.totalPages!;
     }
 
     this.pagesToDisplay = pagesToDisplay;

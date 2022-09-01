@@ -1,20 +1,23 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { MovieRoutingModule } from './movie-routing.module';
-import { MovieComponent } from './movie.component';
-import { MoviehomeComponent } from './moviehome/moviehome.component';
-import { IconModule } from 'src/app/shared/heroicon/icon/icon.module';
-import { SharedModule } from 'src/app/shared/shared.module';
-import { TmdbService } from 'src/app/core/services/tmdb.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { TmdbService } from 'src/app/core/services/tmdb.service';
+import { IconModule } from 'src/app/shared/heroicon/icon/icon.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { HomeComponent } from './home/home.component';
+import { MovieRoutingModule } from './movie-routing.module';
+import { MovieComponent } from './movie.component';
+import { MonitorComponent } from './monitor/monitor.component';
+import { MovieService } from 'src/app/core/services/local.movie.service';
 
 
 @NgModule({
   declarations: [
     MovieComponent,
-    MoviehomeComponent
+    HomeComponent,
+    MonitorComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +27,6 @@ import { HotToastModule } from '@ngneat/hot-toast';
     HttpClientModule,
     HotToastModule.forRoot()
   ],
-  providers: [TmdbService]
+  providers: [TmdbService, MovieService]
 })
 export class MovieModule { }

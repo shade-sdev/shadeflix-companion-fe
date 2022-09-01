@@ -4916,3 +4916,25 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .main__table-btn--view:hover {
   color: rgba(255, 85, 165, 0.8);
 }
+
+.dashbox__more {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.2px;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.dashbox__more:hover {
+  color: #ff55a5;
+}

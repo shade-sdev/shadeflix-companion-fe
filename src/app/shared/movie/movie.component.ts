@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { HotToastService } from '@ngneat/hot-toast';
+import { MovieService } from 'src/app/core/services/local.movie.service';
 import { TmdbService } from 'src/app/core/services/tmdb.service';
 
 @Component({
@@ -9,17 +10,22 @@ import { TmdbService } from 'src/app/core/services/tmdb.service';
 })
 export class MovieComponent implements OnInit {
 
+  @Input() id?: string;
   @Input() score?: string;
   @Input() genres?: string[];
   @Input() title?: string;
   @Input() imgSrc?: string;
   @Input() tmdbId!: number;
+  @Input() downloadStatus?: string;
+
   @Input() magnet?: boolean = false;
   @Input() monitor?: boolean = false;
   @Input() download?: boolean = false;
   @Input() unmonitor?: boolean = false;
 
-  constructor(private tmdbService: TmdbService, private toast: HotToastService) { }
+  @Output() unMonitorAction: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor(private tmdbService: TmdbService, private toast: HotToastService, private movieService: MovieService) { }
 
   ngOnInit(): void {
   }
@@ -36,6 +42,12 @@ export class MovieComponent implements OnInit {
       )
       .subscribe();
   }
+
+  public emitUnMonitorAction(id: string) {
+    this.unMonitorAction.emit(id);
+  }
+
+
 
 
 }
