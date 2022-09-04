@@ -18,15 +18,15 @@
                 (click)="emitUnMonitorAction(id!)">
                 <i class="icon ion-ios-trash"></i>
             </button>
+            <a [ngClass]="download ? '' : 'd-none'" class="dashbox__more" href="#">{{downloadStatus}}</a>
         </div>
-        <h3 class="card__title"><a href="#">{{title}}</a></h3>
+        <h3 class="card__title"><a href="https://shadeflix.ga/movie/view/{{tmdbId}}" target="_blank">{{title}}</a></h3>
         <span class="card__category">
             <a href="#">{{genres}}</a>
         </span>
         <div>
 
-            <span class="card__rate"><i class="icon ion-ios-star"></i>{{score}} <a [ngClass]="download ? '' : 'd-none'"
-                    class="dashbox__more" href="#">{{downloadStatus}}</a></span>
+            <span class="card__rate"><i class="icon ion-ios-star"></i>{{score}}</span>
         </div>
     </div>
 </div>
